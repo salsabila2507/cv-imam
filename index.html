@@ -1,118 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Imam Islamuddin – CV (ATS)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Imam Islamuddin | AI • Web3 • Community</title>
 
   <style>
+    :root {
+      --bg: #05080f;
+      --card: rgba(255,255,255,0.06);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+      --border: rgba(255,255,255,0.14);
+    }
+
+    * { box-sizing: border-box; }
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      color: #000;
-      line-height: 1.6;
-      background: #fff;
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: radial-gradient(circle at top, #0f172a 0%, var(--bg) 60%);
+      color: var(--text);
+      line-height: 1.7;
     }
 
-    h1 {
-      font-size: 26px;
-      margin-bottom: 4px;
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 56px 24px 80px;
     }
 
-    h2 {
+    .header h1 {
+      font-size: 40px;
+      margin: 0;
+      background: linear-gradient(90deg, #38bdf8, #22d3ee);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .header h2 {
+      margin: 8px 0 18px;
+      font-weight: 400;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
       font-size: 14px;
-      font-weight: normal;
-      margin-top: 0;
-      color: #333;
+      color: var(--muted);
     }
 
-    h3 {
-      font-size: 14px;
-      margin-top: 24px;
-      margin-bottom: 8px;
-      text-transform: uppercase;
-      border-bottom: 1px solid #000;
-      padding-bottom: 2px;
+    .grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 28px;
+      margin-top: 48px;
     }
 
-    p {
-      margin: 6px 0;
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
     }
 
-    ul {
-      margin: 6px 0 12px 18px;
+    .card {
+      background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0.08),
+        rgba(255,255,255,0.03)
+      );
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px 22px 26px;
+      backdrop-filter: blur(10px);
     }
 
-    li {
-      margin-bottom: 4px;
-    }
-
-    .contact {
+    .card h3 {
+      margin: 0 0 16px;
       font-size: 13px;
-      margin-bottom: 18px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      background: rgba(56,189,248,0.15);
+      border: 1px solid rgba(56,189,248,0.35);
+      color: var(--accent);
+    }
+
+    .role { margin-bottom: 22px; }
+    .role strong { display: block; font-size: 15px; margin-bottom: 4px; }
+    .role span { font-size: 13px; color: var(--muted); }
+
+    .footer {
+      margin-top: 64px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
     }
   </style>
 </head>
 
 <body>
+  <div class="container">
 
-  <h1>Imam Islamuddin</h1>
-  <h2>AI, Robotics & Web3 Community Professional</h2>
+    <!-- HEADER -->
+    <div class="header">
+      <h1>Imam Islamuddin</h1>
+      <h2>AI • Web3 • Community & Ecosystem Professional</h2>
 
-  <div class="contact">
-    Indonesia<br>
-    Email: arkhanalghozali18@gmail.com<br>
-    Phone: +62 851-7323-1191<br>
-    GitHub: https://github.com/salsabila2507<br>
-    X (Twitter): https://x.com/calbuldelis69<br>
-    Instagram: https://instagram.com/yas4life_69<br>
-    Telegram: https://t.me/inbisiblefoxyasuo
+      <div class="meta">
+        <div>📍 Indonesia</div>
+        <div>📧 arkhanalghozali18@gmail.com</div>
+        <div>📞 +62 851-7323-1191</div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="grid">
+
+      <!-- LEFT -->
+      <div class="card">
+        <h3>Profile</h3>
+        <p>
+          Multidisciplinary professional focused on Web3 ecosystems,
+          AI-assisted workflows, and decentralized communities.
+          Experienced in community operations, ambassador programs,
+          and technical content support across blockchain projects.
+        </p>
+
+        <h3 style="margin-top:26px">Core Skills</h3>
+        <div class="tags">
+          <div class="tag">Web3 Community</div>
+          <div class="tag">Ambassador Programs</div>
+          <div class="tag">AI-assisted Research</div>
+          <div class="tag">Prompt Engineering</div>
+          <div class="tag">DeFi</div>
+          <div class="tag">GameFi</div>
+          <div class="tag">RWA</div>
+          <div class="tag">Technical Writing</div>
+        </div>
+
+        <h3 style="margin-top:26px">Digital Presence</h3>
+        <p>
+          🔗
+          <a href="https://x.com/calbuldelis69" target="_blank">X</a> ·
+          <a href="https://instagram.com/yas4life_69" target="_blank">Instagram</a> ·
+          <a href="https://t.me/inbisiblefoxyasuo" target="_blank">Telegram</a> ·
+          <a href="https://github.com/salsabila2507" target="_blank">GitHub</a>
+        </p>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="card">
+        <h3>Experience</h3>
+
+        <div class="role">
+          <strong>Community Manager — Nuwa World</strong>
+          <span>AI-Enhanced Identity & Web3 Search</span>
+          <ul>
+            <li>Supported community understanding of an AI-powered platform that analyzes publicly available digital identity data</li>
+            <li>Managed engagement, moderation, and educational communication across social platforms</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <strong>Ambassador — RealGo</strong>
+          <span>AR-Based Web3 Game</span>
+          <ul>
+            <li>Represented a location-based AR and Web3 gaming platform combining real-world exploration with blockchain mechanics</li>
+            <li>Educated users on gameplay systems, GameFi elements, and ecosystem updates</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <strong>Ambassador — AISIM</strong>
+          <span>Web3 & AI-Driven DePIN Infrastructure</span>
+          <ul>
+            <li>Advocated for a decentralized connectivity project leveraging AI-driven infrastructure tools</li>
+            <li>Assisted onboarding and communicated project vision and utilities to the community</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <strong>Ambassador — Renta Network</strong>
+          <span>Web3 Rental & Real-World Assets (RWA)</span>
+          <ul>
+            <li>Represented a decentralized rental platform utilizing blockchain and PropertyNFTs for real-world assets</li>
+            <li>Supported community education around peer-to-peer rentals, RWA tokenization, and ecosystem partnerships</li>
+          </ul>
+        </div>
+
+        <h3 style="margin-top:28px">Education</h3>
+        <p>
+          <strong>Associate Degree (Diploma / D3)</strong><br>
+          Universitas Gunadarma
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      © Imam Islamuddin — Web3 • AI-Assisted • Community
+    </div>
+
   </div>
-
-  <h3>Professional Summary</h3>
-  <p>
-    Multidisciplinary professional with experience in Artificial Intelligence,
-    Robotics, and Web3 ecosystems. Skilled in AI model training, prompt engineering,
-    robotics experimentation, and decentralized community operations.
-  </p>
-
-  <h3>Core Skills</h3>
-  <ul>
-    <li>Artificial Intelligence (AI) Training</li>
-    <li>Prompt Engineering</li>
-    <li>Robotics & Human-Robot Interaction (HRI)</li>
-    <li>Web3, DeFi, GameFi, NFT Ecosystems</li>
-    <li>Community Management & Moderation</li>
-    <li>Technical Writing & Documentation</li>
-  </ul>
-
-  <h3>Professional Experience</h3>
-
-  <p><strong>AI & Robotics Researcher (Independent)</strong></p>
-  <ul>
-    <li>Conducted robotics experiments integrated with AI reasoning models</li>
-    <li>Optimized AI-assisted robot behavior using prompt engineering techniques</li>
-  </ul>
-
-  <p><strong>Community Manager – Nuwa World</strong></p>
-  <ul>
-    <li>Managed and grew Web3 communities across X, Telegram, and Discord</li>
-    <li>Handled moderation workflows, engagement strategy, and contributor coordination</li>
-  </ul>
-
-  <p><strong>Ambassador – RealGo & AISIM</strong></p>
-  <ul>
-    <li>Represented AI and Web3 projects to global audiences</li>
-    <li>Created educational and growth-oriented content</li>
-  </ul>
-
-  <h3>Education</h3>
-  <p>
-    Associate Degree (Diploma / D3)<br>
-    Universitas Gunadarma
-  </p>
-
 </body>
-</html>
+      </html>

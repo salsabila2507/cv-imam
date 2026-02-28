@@ -13,50 +13,52 @@
       --muted: #9ca3af;
       --accent: #38bdf8;
       --accent2: #22d3ee;
-      --border: rgba(255,255,255,0.12);
+      --border: rgba(255,255,255,0.14);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background:
-        radial-gradient(circle at top, #0f172a 0%, var(--bg) 55%);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #0f172a 0%, var(--bg) 60%);
       color: var(--text);
-      line-height: 1.65;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     .container {
       max-width: 1100px;
       margin: auto;
-      padding: 48px 24px 80px;
+      padding: 56px 24px 80px;
     }
 
-    /* ===== HEADER ===== */
+    /* HEADER */
     .header {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
       margin-bottom: 56px;
     }
 
     .header h1 {
-      font-size: 40px;
+      font-size: 42px;
       margin: 0;
-      letter-spacing: 0.5px;
       background: linear-gradient(90deg, var(--accent), var(--accent2));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     .header h2 {
+      margin: 8px 0 18px;
       font-weight: 400;
-      color: var(--muted);
-      margin: 0;
       font-size: 18px;
+      color: var(--muted);
     }
 
     .meta {
@@ -67,7 +69,7 @@
       color: var(--muted);
     }
 
-    /* ===== GRID ===== */
+    /* GRID */
     .grid {
       display: grid;
       grid-template-columns: 320px 1fr;
@@ -80,7 +82,7 @@
       }
     }
 
-    /* ===== CARD ===== */
+    /* CARD */
     .card {
       background: linear-gradient(
         180deg,
@@ -89,12 +91,12 @@
       );
       border: 1px solid var(--border);
       border-radius: 18px;
-      padding: 22px 22px 24px;
+      padding: 22px 22px 26px;
       backdrop-filter: blur(10px);
     }
 
     .card h3 {
-      margin: 0 0 14px;
+      margin: 0 0 16px;
       font-size: 13px;
       letter-spacing: 1.2px;
       text-transform: uppercase;
@@ -102,8 +104,7 @@
     }
 
     .card p {
-      margin: 0 0 10px;
-      color: var(--text);
+      margin: 0 0 12px;
     }
 
     .card ul {
@@ -113,14 +114,9 @@
 
     .card li {
       margin-bottom: 8px;
-      color: var(--text);
     }
 
-    .muted {
-      color: var(--muted);
-    }
-
-    /* ===== SKILLS ===== */
+    /* TAGS */
     .tags {
       display: flex;
       flex-wrap: wrap;
@@ -136,9 +132,9 @@
       color: var(--accent);
     }
 
-    /* ===== EXPERIENCE ===== */
+    /* EXPERIENCE */
     .role {
-      margin-bottom: 18px;
+      margin-bottom: 22px;
     }
 
     .role strong {
@@ -152,12 +148,12 @@
       color: var(--muted);
     }
 
-    /* ===== FOOTER ===== */
+    /* FOOTER */
     .footer {
-      margin-top: 56px;
+      margin-top: 64px;
+      text-align: center;
       font-size: 13px;
       color: var(--muted);
-      text-align: center;
     }
   </style>
 </head>
@@ -177,10 +173,10 @@
       </div>
     </div>
 
-    <!-- GRID -->
+    <!-- CONTENT -->
     <div class="grid">
 
-      <!-- LEFT COLUMN -->
+      <!-- LEFT -->
       <div class="card">
         <h3>Profile</h3>
         <p>
@@ -190,7 +186,7 @@
           decentralized community growth.
         </p>
 
-        <h3 style="margin-top:24px">Core Skills</h3>
+        <h3 style="margin-top:26px">Core Skills</h3>
         <div class="tags">
           <div class="tag">AI Training</div>
           <div class="tag">Prompt Engineering</div>
@@ -203,19 +199,23 @@
           <div class="tag">Community Ops</div>
         </div>
 
-        <h3 style="margin-top:24px">Digital</h3>
-        <p class="muted">X: @calbuldelis69</p>
-        <p class="muted">Telegram: @inbisiblefoxyasuo</p>
-        <p class="muted">Discord: @yas4life_69</p>
+        <h3 style="margin-top:26px">Digital Presence</h3>
+        <p>
+          🔗
+          <a href="https://x.com/calbuldelis69" target="_blank">X</a> ·
+          <a href="https://instagram.com/yas4life_69" target="_blank">Instagram</a> ·
+          <a href="https://t.me/inbisiblefoxyasuo" target="_blank">Telegram</a> ·
+          <a href="https://github.com/salsabila2507" target="_blank">GitHub</a>
+        </p>
       </div>
 
-      <!-- RIGHT COLUMN -->
+      <!-- RIGHT -->
       <div class="card">
         <h3>Experience</h3>
 
         <div class="role">
           <strong>AI & Robotics Researcher (Independent)</strong>
-          <span>Research • Experimentation • AI Reasoning</span>
+          <span>AI • Robotics • Experimentation</span>
           <ul>
             <li>Designed hands-on robotics experiments integrated with AI reasoning models</li>
             <li>Applied prompt engineering to optimize AI-assisted robot behavior</li>
@@ -235,8 +235,8 @@
           <strong>Ambassador — RealGo & AISIM</strong>
           <span>AI & Web3 Advocacy</span>
           <ul>
-            <li>Represented high-growth AI and Web3 projects to global users</li>
-            <li>Created educational and growth-driven content</li>
+            <li>Represented AI and Web3 projects to global communities</li>
+            <li>Produced educational and growth-oriented content</li>
           </ul>
         </div>
 
@@ -255,4 +255,4 @@
 
   </div>
 </body>
-    </html>
+</html>
